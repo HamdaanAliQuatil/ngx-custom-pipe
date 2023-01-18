@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-custom-pipe": {
+      "projectType": "library",
+      "root": "projects/ngx-custom-pipe",
+      "sourceRoot": "projects/ngx-custom-pipe/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-custom-pipe/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-custom-pipe/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-custom-pipe/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-custom-pipe/src/test.ts",
+            "tsConfig": "projects/ngx-custom-pipe/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-custom-pipe/karma.conf.js"
+          }
+        }
+      }
+    }
+  }
+}
