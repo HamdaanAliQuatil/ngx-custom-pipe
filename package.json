@@ -1,15 +1,18 @@
 {
-  "name": "custom-pipe",
+  "name": "ngx-custom-pipe",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "packagr": "ng-packagr -p ng-package.json"
+
   },
+  "typings": "dist/ngx-custom-pipe.d.ts",
   "private": true,
-  "dependencies": {
+  "peerDependencies": {
     "@angular/animations": "^14.0.0",
     "@angular/common": "^14.0.0",
     "@angular/compiler": "^14.0.0",

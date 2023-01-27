@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { NgxCustomPipeComponent } from './ngx-custom-pipe.component';
-import { NumberToWordsPipe } from './number-to-words.pipe';
+import { NumberToWordsPipe } from './numberToWords/number-to-words.pipe';
 
 
 
 @NgModule({
   declarations: [
     NgxCustomPipeComponent,
-    NumberToWordsPipe
+    NumberToWordsPipe,
   ],
   imports: [
   ],
