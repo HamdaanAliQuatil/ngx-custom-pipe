@@ -3,5 +3,9 @@
   "dest": "../../dist/ngx-custom-pipe",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": [
+    "abab",
+    "abbrev",
+  ]
 }
