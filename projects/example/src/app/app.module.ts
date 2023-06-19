@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NgxCustomPipeModule } from 'projects/ngx-custom-pipe/src/public-api';
+import { NgxCustomPipeModule } from 'ngx-custom-pipe';
 import { NumberToWordsPipe } from 'projects/ngx-custom-pipe/src/public-api';
 
 @NgModule({

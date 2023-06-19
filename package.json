@@ -1,6 +1,6 @@
 {
-  "name": "ngx-library",
-  "version": "0.0.0",
+  "name": "ngx-custom-pipe",
+  "version": "1.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,7 +9,6 @@
     "test": "ng test",
     "lint": "ng lint"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.0",
     "@angular/common": "^15.2.0",
