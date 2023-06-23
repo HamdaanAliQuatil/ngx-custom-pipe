@@ -1,27 +1,80 @@
-# NgxLibrary
+<center><h1>ngx-custom-pipe</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+![npm](https://img.shields.io/npm/v/ngx-custom-pipe)
+![NPM Downloads](https://img.shields.io/npm/dw/ngx-custom-pipe)
+![NPM Downloads](https://img.shields.io/npm/dt/ngx-custom-pipe)
+![License](https://img.shields.io/npm/l/ngx-custom-pipe)
+![GitHub issues](https://img.shields.io/github/issues/hamdaanaliquatil/ngx-custom-pipe)
 
-## Development server
+A TypeScript library, designed to convert any numeric number into its corresponding representation in words. This powerful pipe eliminates the need for developers to manually implement the logic, saving development time and enabling a faster and more focused development process. Particularly useful in generating invoices, generating reports, or presenting numeric data to end-users in a more friendly and understandable way.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+</center>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Table of contents
 
-## Build
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Installation
 
-## Running unit tests
+1. Run the following command at the root of your project:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+        npm install ngx-custom-pipe
 
-## Running end-to-end tests
+This will install the `ngx-custom-pipe` package as a project dependency in the node_modules folder.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Usage
 
-## Further help
+1. Import the NgxCustomPipeModule module in your *.module.ts:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+        import { NgxCustomPipeModule } from 'ngx-custom-pipe';
+
+2. Add the NgxCustomPipeModule module to the `imports` array of your `@NgModule` decorator:
+
+        
+        import { NgxCustomPipeModule } from 'ngx-custom-pipe';
+
+        @NgModule({
+            // ...
+            imports: [
+            // ...
+            NgxCustomPipeModule
+            ]
+        })
+        
+
+3. Pipes can also be injected into components or services. Declare the pipe in the providers array of your `*.module.ts` or `*.component.ts`:
+
+    For example:
+
+        import { NgxCustomPipe } from 'ngx-custom-pipe';
+
+        @Component({
+            selector: 'app-root',
+            templateUrl: './app.component.html',
+            styleUrls: ['./app.component.scss'],
+            providers: [NumberToWordsPipe]
+        })
+        export class AppComponent {
+            title = 123456789;
+            
+            constructor(private numberToWordsPipe: NumberToWordsPipe) {
+                console.log(this.numberToWordsPipe.transform(this.title));
+            }
+        }
+        
+
+4. Pipes can also be used in templates.
+
+    ```
+    <p>{{ 1234567890 | numberToWords }}</p>
+    ```
+
+# Contributing
+
+# License
+
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
