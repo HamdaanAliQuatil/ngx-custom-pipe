@@ -9,6 +9,13 @@
     "test": "ng test",
     "lint": "ng lint"
   },
+  "keywords": [
+    "angular",
+    "pipe",
+    "custom",
+    "ngx-custom-pipe",
+    "numberToWords"
+  ],
   "dependencies": {
     "@angular/animations": "^15.2.0",
     "@angular/common": "^15.2.0",
