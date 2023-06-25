@@ -81,4 +81,4 @@ To contribute to this project, please read the [CONTRIBUTING.md](CONTRIBUTING.md
 
 # License
 
-This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE.md) file for details.

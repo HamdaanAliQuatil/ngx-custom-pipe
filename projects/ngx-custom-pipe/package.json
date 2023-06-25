@@ -1,6 +1,13 @@
 {
   "name": "ngx-custom-pipe",
-  "version": "0.0.1",
+  "version": "1.1.5",
+  "description": "This is a custom pipe for angular to convert number to words",
+  "license": "BSD-3-Clause",
+  "author": "Hamdaan Ali <q.hmd08@outlook.com> (https://github.com/HamdaanAliQuatil)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HamdaanAliQuatil/ngx-custom-pipe.git"
+  },
   "peerDependencies": {
     "@angular/common": "^15.2.0",
     "@angular/core": "^15.2.0"
