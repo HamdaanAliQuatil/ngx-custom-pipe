@@ -5,23 +5,33 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NumberToWordsPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(value: unknown, region: string): unknown {
     if (typeof value !== 'number') {
       return null; // Return null if the input value is not a number
     }
 
-    
-    const scaleWords: string[] = ['', 'thousand', 'million', 'billion', 'trillion'];
+    let scaleWords: string[] = [];
 
+    if (region === 'INR') {
+      scaleWords = ['', 'thousand', 'lakhs', 'crores'];
+    } else {
+      scaleWords= ['', 'thousand', 'million', 'billion', 'trillion'];
+    }
     if (value === 0) {
       return 'zero'; // Special case for zero
     }
 
     // Split the number into groups of three digits from right to left
     const groups: number[] = [];
-    while ((value as number) > 0) {
+
+    if (region === 'INR') {
       groups.push((value as number) % 1000);
       value = Math.floor((value as number) / 1000);
+    }
+
+    while ((value as number) > 0) {
+      groups.push((value as number) % (region === 'INR' ? 100 : 1000));
+      value = Math.floor((value as number) / (region === 'INR' ? 100 : 1000));
     }
 
     // Convert each group to words and concatenate with the appropriate scale word

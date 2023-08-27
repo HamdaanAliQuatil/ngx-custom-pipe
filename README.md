@@ -5,7 +5,7 @@
 ![npm](https://img.shields.io/npm/v/ngx-custom-pipe)
 ![NPM Downloads](https://img.shields.io/npm/dw/ngx-custom-pipe)
 ![NPM Downloads](https://img.shields.io/npm/dt/ngx-custom-pipe)
-![License](https://img.shields.io/npm/l/ngx-custom-pipe)
+[![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-green.svg?style=rounded)](https://github.com/HamdaanAliQuatil/ngx-custom-pipe/blob/main/LICENSE.md)
 ![GitHub issues](https://img.shields.io/github/issues/hamdaanaliquatil/ngx-custom-pipe)
 
 A TypeScript library, designed to convert any numeric number into its corresponding representation in words. This powerful pipe eliminates the need for developers to manually implement the logic, saving development time and enabling a faster and more focused development process. Particularly useful in generating invoices, generating reports, or presenting numeric data to end-users in a more friendly and understandable way.
