@@ -10,6 +10,6 @@ export class AppComponent {
   title = 123456789;
   
   constructor(private numberToWordsPipe: NumberToWordsPipe) {
-    console.log(this.numberToWordsPipe.transform(this.title));
+    console.log(this.numberToWordsPipe.transform(this.title, 'INR'));
   }
 }
