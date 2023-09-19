@@ -2,13 +2,13 @@
 
 <h1>ngx-custom-pipe</h1>
 
-![npm](https://img.shields.io/npm/v/ngx-custom-pipe)
+[![npm](https://img.shields.io/npm/v/ngx-custom-pipe)](https://www.npmjs.com/package/ngx-custom-pipe)
 ![NPM Downloads](https://img.shields.io/npm/dw/ngx-custom-pipe)
 ![NPM Downloads](https://img.shields.io/npm/dt/ngx-custom-pipe)
 ![License](https://img.shields.io/npm/l/ngx-custom-pipe)
 ![GitHub issues](https://img.shields.io/github/issues/hamdaanaliquatil/ngx-custom-pipe)
 
-A TypeScript library, designed to convert any numeric number into its corresponding representation in words. This powerful pipe eliminates the need for developers to manually implement the logic, saving development time and enabling a faster and more focused development process. Particularly useful in generating invoices, generating reports, or presenting numeric data to end-users in a more friendly and understandable way.
+A TypeScript library, designed to convert any numeric number into its corresponding representation in words. The pipe comes in two numbering systems, The Indian Numbering System and The International Numbering System. This powerful pipe eliminates the need for developers to manually implement the logic, saving development time and enabling a faster and more focused development process. Particularly useful in generating invoices, generating reports, or presenting numeric data to end-users in a more friendly and understandable way.
 
 </div>
 
@@ -68,11 +68,35 @@ This will install the `ngx-custom-pipe` package as a project dependency in the n
             }
         }
         
+    NOTE: By default, the pipe uses the International Numbering System. To use the Indian Numbering System, pass `'INR'` as a parameter to the pipe.
+
+    For example:
+
+        import { NgxCustomPipe } from 'ngx-custom-pipe';
+
+        @Component({
+            selector: 'app-root',
+            templateUrl: './app.component.html',
+            styleUrls: ['./app.component.scss'],
+            providers: [NumberToWordsPipe]
+        })
+        export class AppComponent {
+            title = 123456789;
+            
+            constructor(private numberToWordsPipe: NumberToWordsPipe) {
+                console.log(this.numberToWordsPipe.transform(this.title, 'INR'));
+            }
+        }
 
 4. Pipes can also be used in templates.
 
     ```
     <p>{{ 1234567890 | numberToWords }}</p>
+    ```
+
+    To use the Indian Numbering System, pass `'INR'` as a parameter to the pipe.
+    ```
+    <p>{{ 1234567890 | numberToWords: 'INR' }}</p>
     ```
 
 # Contributing
