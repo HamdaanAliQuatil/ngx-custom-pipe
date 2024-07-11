@@ -1,2 +1,9 @@
 <lib-ngx-custom-pipe></lib-ngx-custom-pipe>
-{{ 123456789 | numberToWords:'INR'  }}
+{{ 123456789 | numberToWords:'USD'  }}
+<p>{{ 'john.doe@example.com' | piiMask: 'email' }}</p>
+<p>{{ '123-456-7890' | piiMask: 'phone' }}</p>
+<p>{{ 'Some Sensitive Data' | piiMask: 'full' }}</p>
+<p>{{ 'Some Sensitive Data' | piiMask: 'partial': { unmaskedCount: 6 } }}</p>
+
+<!-- TODO: Examples for pattern and custom mask -->
+
